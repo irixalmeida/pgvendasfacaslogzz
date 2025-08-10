@@ -1,3 +1,16 @@
+/* Linha do botão WhatsApp com ícone ao lado */
+.whatsapp-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin: 18px 0 0 0;
+}
+.whatsapp-icon-big {
+  width: 80px;
+  height: 80px;
+  display: block;
+}
 @media (max-width: 600px) {
   .hero {
     flex-direction: column !important;
@@ -208,7 +221,7 @@ body {
 
 .aviso-destaque {
   background: #FFD600;
-  color: #fff;
+  color: #111 !important;
   border: 2px solid #FFD600;
   border-radius: 8px;
   font-weight: bold;
@@ -223,7 +236,7 @@ body {
 /* Aviso principal de pagamento na entrega estilo gradiente */
 .aviso-entrega {
   background: linear-gradient(90deg, #ffe082 0%, #ffb300 100%);
-  color: #111;
+  color: #111 !important;
   border-radius: 8px;
   font-weight: bold;
   text-align: center;
