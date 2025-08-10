@@ -1,3 +1,21 @@
+/* Texto vermelho forte */
+.texto-vermelho {
+  color: #e53935 !important;
+  font-weight: bold;
+}
+/* Avisos de pagamento na entrega */
+.aviso-destaque {
+  background: #ffeaea;
+  color: #b80000;
+  border: 2px solid #ff4d4d;
+  border-radius: 8px;
+  font-weight: bold;
+  text-align: center;
+  padding: 12px 10px;
+  margin: 18px 0 10px 0;
+  font-size: 1.08em;
+  box-shadow: 0 2px 8px #0001;
+}
 
 body {
   font-family: 'Segoe UI', Arial, sans-serif;
@@ -70,9 +88,11 @@ body {
   font-size: 2em;
   font-weight: bold;
 }
+
+
 .cta-btn {
   display: block;
-  background: #27ae60;
+  background: #e53935;
   color: #fff;
   text-align: center;
   padding: 18px 0;
@@ -81,15 +101,62 @@ body {
   font-weight: bold;
   text-decoration: none;
   margin: 18px 0 8px 0;
-  box-shadow: 0 2px 8px #0001;
-  transition: background 0.2s;
+  box-shadow: 0 2px 8px #0002;
+  transition: background 0.2s, transform 0.2s;
+  letter-spacing: 1px;
 }
 .cta-btn.grande {
   font-size: 1.3em;
   padding: 22px 0;
 }
 .cta-btn:hover {
-  background: #219150;
+  background: #b71c1c;
+  transform: scale(1.04);
+}
+.pulse {
+  animation: pulse 1.2s infinite;
+}
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 #e5393566; }
+  70% { box-shadow: 0 0 0 12px #e5393500; }
+  100% { box-shadow: 0 0 0 0 #e5393500; }
+}
+
+.aviso-destaque {
+  background: #FFD600;
+  color: #fff;
+  border: 2px solid #FFD600;
+  border-radius: 8px;
+  font-weight: bold;
+  text-align: center;
+  padding: 12px 10px;
+  margin: 18px 0 10px 0;
+  font-size: 1.08em;
+  box-shadow: 0 2px 8px #0001;
+  letter-spacing: 0.5px;
+}
+
+/* Aviso principal de pagamento na entrega estilo gradiente */
+.aviso-entrega {
+  background: linear-gradient(90deg, #ffe082 0%, #ffb300 100%);
+  color: #111;
+  border-radius: 8px;
+  font-weight: bold;
+  text-align: center;
+  padding: 18px 10px;
+  margin: 18px 0 10px 0;
+  font-size: 1.18em;
+  box-shadow: 0 2px 8px #0001;
+  letter-spacing: 1px;
+  border: none;
+}
+
+.whatsapp-icon {
+  width: 22px;
+  height: 22px;
+  vertical-align: middle;
+  margin-right: 8px;
+  margin-bottom: 3px;
 }
 .pagamento {
   font-weight: bold;
@@ -275,8 +342,20 @@ body {
     flex-direction: column;
     padding: 18px 8px;
   }
-  .main-img {
-    margin: 24px 0 0 0;
-    max-width: 90vw;
-  }
+.preco .de {
+  color: #e53935;
+  text-decoration: line-through;
+  margin-right: 8px;
+  font-weight: bold;
+}
+.preco .por {
+  color: #27ae60;
+  font-size: 2em;
+  font-weight: bold;
+  animation: pulse-preco 1.2s infinite;
+}
+@keyframes pulse-preco {
+  0% { text-shadow: 0 0 0 #27ae6066; }
+  70% { text-shadow: 0 0 16px #27ae6066; }
+  100% { text-shadow: 0 0 0 #27ae6000; }
 }
