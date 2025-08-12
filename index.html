@@ -69,9 +69,31 @@
                 box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
             }
         }
+        .pulse-banner {
+            animation: pulseBanner 3s ease-in-out infinite;
+        }
+        @keyframes pulseBanner {
+            0%, 100% { 
+                background-color: rgb(220, 38, 38);
+            }
+            50% { 
+                background-color: rgb(239, 68, 68);
+            }
+        }
     </style>
 </head>
 <body class="font-sans bg-gray-50">
+    <!-- Top Banner -->
+    <div class="bg-red-600 text-white py-3 relative overflow-hidden pulse-banner">
+        <div class="absolute inset-0 bg-gradient-to-r from-red-600 via-red-500 to-red-600"></div>
+        <a href="https://entrega.logzz.com.br/pay/memqpxzgd/1-kit-com-6-facas-promocao?utm_source=organic&utm_campaign=&utm_medium=&utm_content=&utm_term=" 
+           class="relative z-10 block w-full text-center font-bold text-lg md:text-xl hover:text-yellow-200 transition-colors duration-300"
+           target="_blank">
+            🚚 PAGUE SOMENTE NA ENTREGA 🚚
+        </a>
+        <div class="absolute inset-0 bg-red-500 opacity-0 hover:opacity-20 transition-opacity duration-300"></div>
+    </div>
+    
     <!-- Header Hero Section -->
     <header class="hero-gradient text-white relative overflow-hidden">
         <div class="absolute inset-0 bg-black/20"></div>
